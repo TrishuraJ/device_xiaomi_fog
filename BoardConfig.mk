@@ -197,7 +197,7 @@ BOARD_USES_LEGACY_IMS_SEPOLICY := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := 2026-03-01
 
 # Sepolicy
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
@@ -238,3 +238,6 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/fog/BoardConfigVendor.mk
+
+# Permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
