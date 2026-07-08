@@ -238,3 +238,6 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/fog/BoardConfigVendor.mk
+
+# Permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
